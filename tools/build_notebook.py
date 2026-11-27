@@ -17,7 +17,7 @@ OUT = ROOT / "notebook" / "FM2270_backtest.ipynb"
 GROUP_NAME = "Project Group C"
 MEMBERS = "[Full name, student number]"
 REPO_URL = "https://github.com/joaojleitao/FM2270_Group_Project"
-APP_URL = "[STREAMLIT APP URL]"
+APP_URL = "https://fm2270-group-c.streamlit.app"
 
 src = MODULE.read_text(encoding="utf-8")
 tree = ast.parse(src)

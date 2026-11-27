@@ -20,7 +20,7 @@ CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 GROUP_NAME = "Project Group C"
 MEMBERS = "[Full name, student number]"
 REPO_URL = "https://github.com/joaojleitao/FM2270_Group_Project"
-APP_URL = "[STREAMLIT APP URL]"
+APP_URL = "https://fm2270-group-c.streamlit.app"
 DATE = "November 2026"
 
 perf = pd.read_csv(OUTS / "table1_performance.csv", index_col=0)
@@ -109,7 +109,7 @@ a {{ color: #1f4e79; }}
     <tr><td><b>Course</b></td><td>2270 Financial Modeling, MSc in Finance, Nova SBE</td></tr>
     <tr><td><b>Date</b></td><td>{DATE}</td></tr>
     <tr><td><b>Notebook &amp; source code</b></td><td><a href="{REPO_URL}">{REPO_URL}</a></td></tr>
-    <tr><td><b>Interactive app</b></td><td>{APP_URL}</td></tr>
+    <tr><td><b>Interactive app</b></td><td><a href="{APP_URL}">{APP_URL}</a></td></tr>
   </table>
   <p class="small" style="margin-top:30pt;text-align:center">Academic project. All results are hypothetical backtests on historical data
   (January 2006 – October 2026) and do not guarantee future performance. This document is not investment advice.</p>
@@ -262,7 +262,7 @@ would be weaker without it. Inside SPY, the index replacing failing companies is
 <p>An interactive app lets the investor change the <b>volatility lookback</b> (1–24 months), the <b>rebalancing frequency</b>, the <b>transaction cost</b>
 and the <b>start year</b>, and see the resulting cumulative performance, weights and full performance table against the same benchmarks. It imports
 the same calculation functions as the notebook (an automated test checks they are identical), and its default settings reproduce Table 1.
-App: {APP_URL} · Source code, requirements and run instructions: <a href="{REPO_URL}">{REPO_URL}</a>.</p>
+App: <a href="{APP_URL}">{APP_URL}</a> · Source code, requirements and run instructions: <a href="{REPO_URL}">{REPO_URL}</a>.</p>
 APP_SCREENSHOT
 
 <h2>11. Generative-AI disclosure</h2>
@@ -284,7 +284,7 @@ Data: Yahoo Finance via the <code>yfinance</code> Python package (adjusted price
 
 shot = DEST / "app_screenshot.png"
 html = html.replace("APP_SCREENSHOT", f'<img class="fig" style="width:88%;margin-left:6%;border:0.6pt solid #bbb" src="data:image/png;base64,'
-                    f'{base64.b64encode(shot.read_bytes()).decode()}"><p class="cap">Figure 4. The app with its default settings.</p>'
+                    f'{base64.b64encode(shot.read_bytes()).decode()}"><p class="cap">Figure 4. The deployed app (fm2270-group-c.streamlit.app) with its default settings.</p>'
                     if shot.exists() else "")
 DEST.mkdir(exist_ok=True)
 out_html = DEST / "FM2270_Prospectus.html"

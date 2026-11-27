@@ -279,3 +279,28 @@ Interpretation (in the prospectus): a lower-risk alternative to 60/40, not a hig
 4. Read and understand all the code and the prospectus; tick the approval boxes in `strategy_proposal.md`.
 5. Ask the instructors about (a) working alone and (b) the extent of AI use (the brief asks students to consult them before using AI for complete solutions). Fill in the pre-project AI history above.
 6. Submit on Moodle: `prospectus/FM2270_Prospectus.pdf` and `notebook/FM2270_backtest.ipynb` (both well under 50 MB).
+
+---
+
+## Session 2b: 2026-11-27 (evening): publish, deploy, final rebuild
+
+**Who:** João (Streamlit account, GitHub link, deploy clicks) and Claude Code (Claude Opus 5.5; push, repo visibility, checks, rebuild).
+
+### Steps
+1. João asked Claude to push, make the repository public, do everything needed, and name the group "**Project Group C**".
+   - `GROUP_NAME = "Project Group C"` set in `tools/build_notebook.py`, `tools/build_prospectus.py` and the README.
+   - Commit `6bd42eb` pushed. `gh repo edit --visibility public` → the repository is **PUBLIC**: https://github.com/joaojleitao/FM2270_Group_Project
+2. **Streamlit deployment** (Claude checked João's Chrome through Claude in Chrome; João did every sign-in, terms and OAuth step himself):
+   - 1st check: the Streamlit account set-up form had not been submitted → no app.
+   - 2nd check: the account was set up, but "Your apps" was empty; Settings → Linked accounts showed "not signed in with a source control account" (GitHub not linked) → João linked GitHub and deployed.
+   - 3rd check: **https://fm2270-group-c.streamlit.app** is live. Default settings show exactly Table 1 of the prospectus (6.57%, 6.86%, 0.71, 0.48, 1.92%, 1.66, 7.06%, −0.18, 16.12%, 3.93 for the strategy; benchmarks identical too). Switching to quarterly rebalancing reproduces Table 2's quarterly column exactly (6.44%, 6.90%, 0.69, 16.39%). The setting was switched back to monthly afterwards.
+3. `APP_URL` set in both build scripts and the README; the URL is a clickable link on the cover and in §10 of the prospectus, and is in the notebook header.
+4. App screenshot retaken from the **live public app** (Chrome DevTools, fresh profile = what a grader sees) → `prospectus/app_screenshot.png`, Figure 4.
+5. Notebook regenerated and re-executed (no errors); prospectus rebuilt: cover + 6 content pages; PDF text check: no `[STREAMLIT…]` or `[MOODLE…]` placeholders left, links = app URL + repo URL. `pytest -q`: 12 passed.
+
+### Open items for João
+1. **Members:** the cover and notebook still show "[Full name, student number]". Send them (or edit `MEMBERS` in both build scripts) and rebuild.
+2. Run the notebook once in a fresh Google Colab session (Runtime → Run all).
+3. Read and understand all code and text; tick the approval boxes in `strategy_proposal.md`; fill in the pre-project AI history.
+4. Ask the instructors about working alone (groups of 5–6) and about the extent of AI use.
+5. Submit `prospectus/FM2270_Prospectus.pdf` and `notebook/FM2270_backtest.ipynb` on Moodle. Keep the repo public and the app running until grading ends (Streamlit puts apps to sleep after inactivity; a visitor can wake them with one click).

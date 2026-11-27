@@ -9,7 +9,7 @@
 |---|---|
 | Investor prospectus (PDF: cover + 6 content pages) | `prospectus/FM2270_Prospectus.pdf` |
 | Backtest notebook (reproduces every number, table and figure) | `notebook/FM2270_backtest.ipynb` |
-| Streamlit app (optional, +2) | `app/app.py`, deployed at: _[STREAMLIT APP URL]_ |
+| Streamlit app (optional, +2) | `app/app.py`, deployed at: https://fm2270-group-c.streamlit.app |
 | Source code | https://github.com/joaojleitao/FM2270_Group_Project |
 | AI-use disclosure | `AI_USE_LOG.md`, `journal/JOURNAL.md` |
 
