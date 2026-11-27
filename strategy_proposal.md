@@ -42,7 +42,8 @@ Why these three: liquid, cheap, long histories, and distinct return drivers (equ
 
 ## 5. Risk-free rate
 - **FRED `TB3MS`** (3-month T-bill, secondary market, monthly, % p.a.) via the **keyless CSV URL**, as in `Lecture3_apis_pandas.ipynb` §3.4. No API key is needed in Colab, so the graders can run the notebook. Verified available through 2026-10 on 2026-11-27.
-- Monthly rf: ln(1 + TB3MS/100)/12, consistent with log returns (or TB3MS/100/12 if we use simple returns; state the choice).
+- Monthly rf: ln(1 + TB3MS/100)/12, consistent with log returns (or TB3MS/100/12 if we use simple returns; state the choice). TB3MS is quoted on a discount basis. The difference from a bond-equivalent yield is a few bps p.a. and can be ignored, but say so.
+- Timing: the rf for month t+1 is the TB3MS value of month t+1, i.e. the rate earned over that month. That is not look-ahead, because rf is a benchmark rate, not a trading signal.
 - The Kenneth French library (an alternative in the setup prompt) is not used in class, and it was only updated through 2026-09 when checked, so FRED is preferred.
 
 ## 6. Performance measures (course conventions, `class_materials_index.md` §2)
@@ -57,13 +58,14 @@ All computed on **monthly** returns, over the common sample.
 | Information ratio | mean(R − R_b) / std(R − R_b) (formula sheet version) | (12·mean)/(√12·std) |
 | Tracking error | std(R − R_b) | ×√12 |
 | Max drawdown | max (HWM_t − P_t)/HWM_t on the cumulative index | n/a |
-| Turnover | average one-way turnover per rebalance (and per year) | ×12 for annual |
+| Turnover | average Σᵢ\|Δwᵢ\| per rebalance (see §7 for the definition) | ×(rebalances per year) for annual |
 Also report gross and net-of-cost versions, and optionally CAGR (labelled as an extra; not a course convention).
 **Return type (group decision):** the course uses log returns. Proposal: compute **portfolio** returns from asset **simple** returns (exact aggregation), convert to log for metrics if we follow the course's log convention, and state it.
 Alpha and beta are computed by hand (cov/var), as in class. Optionally cross-check with `statsmodels` OLS (it also gives standard errors / t-stats, useful to say whether alpha is statistically meaningful).
 
 ## 7. Transaction costs
-- **Base case: 10 bps per unit of one-way turnover**, i.e. cost_t = 0.0010 × Σᵢ |w(i,t)_target − w(i,t)_drifted|, deducted at each rebalance. This is the course's "cost × |change in position|" model (`Lecture4_backtesting.ipynb` §4.3).
+- **Base case: 10 bps on every unit traded:** cost_t = 0.0010 × Σᵢ |w(i,t)_target − w(i,t)_drifted|, deducted at each rebalance. This is the course's "cost × |change in position|" model (`Lecture4_backtesting.ipynb` §4.3), where every buy AND every sell pays the cost.
+  ⚠ **Definition to state in the prospectus:** "one-way turnover" is often defined as ½·Σ|Δw| (only the buys, or only the sells). Under that definition, "10 bps per unit of one-way turnover" would charge half as much. We propose the course's model above (more conservative), and reporting turnover as Σ|Δw| per rebalance.
   Justification: very liquid ETFs (tight spreads, low commissions at EU brokers). It is lower than the course's 0.5% retail single-stock example; say why.
 - Show **gross and net** results, and the **breakeven cost** at which the strategy's edge vs the primary benchmark disappears (course "Explore" exercise).
 - ETF expense ratios are already in the ETF prices (total-return NAV). Say this.

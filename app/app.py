@@ -21,9 +21,10 @@ with st.sidebar:
     st.header("Assumptions")
     lookback = st.select_slider("Volatility lookback (months)", options=[3, 6, 12], value=12)
     rebalance = st.radio("Rebalancing frequency", ["Monthly", "Quarterly"])
-    cost_bps = st.slider("Transaction cost (bps per unit of one-way turnover)", 0, 50, 10)
-    start = st.date_input("Start date", value=dt.date(2006, 1, 1),
-                          min_value=dt.date(2006, 1, 1), max_value=dt.date(2020, 1, 1))
+    cost_bps = st.slider("Transaction cost (bps on every unit traded)", 0, 50, 10)
+    # first weights (12-month lookback) apply from 1 Feb 2006, see strategy_proposal.md section 2
+    start = st.date_input("Start date", value=dt.date(2006, 2, 1),
+                          min_value=dt.date(2006, 2, 1), max_value=dt.date(2020, 1, 1))
 
 st.info("Placeholder: the backtest will be added after the group approves strategy_proposal.md. "
         f"Selected: lookback={lookback}m, {rebalance.lower()} rebalancing, {cost_bps} bps, start {start}.")

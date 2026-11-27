@@ -108,4 +108,4 @@ The project follows these conventions wherever they exist (see `CLAUDE.md`).
 | Alpha/beta estimation | OLS (statsmodels) | cov/var by hand (= OLS) | Compute by hand as in class; optionally cross-check with statsmodels OLS for standard errors |
 | Return type | not specified | log returns | Log returns for metrics, as in class; simple returns for aggregating across assets (exact); group to confirm |
 | IR | annualized active return / annualized TE | E(R−R_b)/σ(R−R_b), annualized 12/√12 | Same (they agree) |
-| Transaction costs | 10 bps per unit one-way turnover | cost × abs(Δ position); 0.5% retail example | 10 bps base case for ETFs (justify: liquid ETFs), plus 0/10/25 bps sensitivity and a breakeven cost |
+| Transaction costs | 10 bps per unit one-way turnover | cost × abs(Δ position); 0.5% retail example | 10 bps base case for ETFs (justify: liquid ETFs), charged on every unit traded, i.e. 0.001 × Σ\|Δw\| (course model; note that "one-way turnover" = ½Σ\|Δw\| would halve it), plus 0/10/25 bps sensitivity and a breakeven cost |

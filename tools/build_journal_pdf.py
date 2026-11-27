@@ -5,7 +5,7 @@ Needs: markdown-pdf (which installs PyMuPDF, used here to stamp page numbers).
 """
 from pathlib import Path
 
-import fitz  # PyMuPDF, a dependency of markdown-pdf
+import pymupdf as fitz  # PyMuPDF, a dependency of markdown-pdf
 from markdown_pdf import MarkdownPdf, Section
 
 ROOT = Path(__file__).resolve().parents[1]
