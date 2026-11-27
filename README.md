@@ -10,7 +10,7 @@
 | Investor prospectus (PDF, max 7 content pages + cover) | `prospectus/` |
 | Backtest notebook (reproduces every number, table and figure) | `notebook/FM2270_backtest.ipynb` |
 | Streamlit app (optional, +2) | `app/app.py`, deployed at: _[STREAMLIT APP URL]_ |
-| Source code | _[GITHUB REPO URL]_ |
+| Source code | https://github.com/joaojleitao/FM2270_Group_Project |
 | AI-use disclosure | `AI_USE_LOG.md`, `journal/JOURNAL.md` |
 
 ## Run the notebook in Google Colab

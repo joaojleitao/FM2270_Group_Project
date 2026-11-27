@@ -142,6 +142,11 @@ Third-party plugins Ponytail, claude-mem and Agent Reach were **not installed**:
 
 **Section 10: Accounts**: see the final report / open items.
 
+**GitHub repo (João approved creating it, 2026-11-27)**
+- `gh repo create FM2270_Group_Project --private --source=. --remote=origin --push` created **https://github.com/joaojleitao/FM2270_Group_Project** (PRIVATE, default branch `main`). Commits `52014a1` and `392e00b` were pushed; `git ls-remote` confirms the remote `main` = 392e00b.
+- Repo URL inserted into `README.md` and notebook §13 (Links).
+- ⚠ The repo must be made **PUBLIC or shared with the graders** before submission. Group members still need to be added as collaborators (usernames pending).
+
 ### Files created / modified
 | Path | Change | Commit |
 |---|---|---|
@@ -190,5 +195,5 @@ Third-party plugins Ponytail, claude-mem and Agent Reach were **not installed**:
 2. **João:** create the free keys (AI Studio, OpenRouter, Groq) and `setx` them in a separate terminal; then run `free_llm.py --refresh-models` and a live test of each provider.
 3. **João/group:** decide on Ponytail / claude-mem / Agent Reach (all flagged by SkillSpector) and on Strix (needs Docker).
 4. **Group:** approve or amend `strategy_proposal.md`; fill in the pre-project history above; fill in the group name and members in README and notebook.
-5. **João:** approve creating a **private** GitHub repo (`gh repo create`) and pushing; add the members as collaborators. Remember the repo must be **public or shared with the graders** before submission.
+5. ~~Create a private GitHub repo~~ (done: https://github.com/joaojleitao/FM2270_Group_Project). Still to do: add the members as collaborators (usernames needed), and make the repo **public or shared with the graders** before submission.
 6. Accounts: Streamlit Community Cloud (sign in with GitHub), Google account for Colab.
