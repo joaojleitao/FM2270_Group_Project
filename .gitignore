@@ -1,0 +1,38 @@
+# --- Secrets (never commit) ---
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Logs and data caches (the notebook must download its data via API) ---
+*.log
+data/
+cache/
+*.csv
+*.parquet
+*.pkl
+*.h5
+.cache/
+yfinance_cache/
+
+# --- Raw scratch notes ---
+journal/_setup_raw.txt
+
+# --- OS / editor files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
