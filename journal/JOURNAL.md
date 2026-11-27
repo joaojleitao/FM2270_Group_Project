@@ -191,7 +191,7 @@ Third-party plugins Ponytail, claude-mem and Agent Reach were **not installed**:
 - Wrong alternative-start date in the first proposal draft → corrected after the data check.
 
 ### Open items / next steps
-1. **João:** `codex login`, then restart Claude Code, then `/codex:setup`; check `/codex:review` and `/codex:adversarial-review`.
+1. ~~`codex login`~~ done 2026-11-27: Claude started `codex login` (browser OAuth flow); João completed the ChatGPT sign-in in the browser; `codex login status` → "Logged in using ChatGPT". Still to do: restart Claude Code, run `/codex:setup`, and check `/codex:review` and `/codex:adversarial-review`.
 2. **João:** create the free keys (AI Studio, OpenRouter, Groq) and `setx` them in a separate terminal; then run `free_llm.py --refresh-models` and a live test of each provider.
 3. **João/group:** decide on Ponytail / claude-mem / Agent Reach (all flagged by SkillSpector) and on Strix (needs Docker).
 4. **Group:** approve or amend `strategy_proposal.md`; fill in the pre-project history above; fill in the group name and members in README and notebook.
