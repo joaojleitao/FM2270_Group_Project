@@ -43,6 +43,9 @@ pytest -q
 python tools/build_notebook.py                     # notebook from app/strategy.py (identical functions)
 jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=fm2270 notebook/FM2270_backtest.ipynb
 python tools/build_prospectus.py                   # prospectus PDF from notebook/outputs/ (needs Google Chrome)
+# Word version (needs pandoc and Microsoft Word):
+pandoc prospectus/FM2270_Prospectus.html -f html -t docx --lua-filter tools/docx/pagebreak.lua -o prospectus/FM2270_Prospectus.docx
+powershell -ExecutionPolicy Bypass -File tools/docx/format_docx.ps1 prospectus/FM2270_Prospectus.docx
 pytest -q
 ```
 

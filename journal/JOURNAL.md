@@ -304,3 +304,8 @@ Interpretation (in the prospectus): a lower-risk alternative to 60/40, not a hig
 3. Read and understand all code and text; tick the approval boxes in `strategy_proposal.md`; fill in the pre-project AI history.
 4. Ask the instructors about working alone (groups of 5–6) and about the extent of AI use.
 5. Submit `prospectus/FM2270_Prospectus.pdf` and `notebook/FM2270_backtest.ipynb` on Moodle. Keep the repo public and the app running until grading ends (Streamlit puts apps to sleep after inactivity; a visitor can wake them with one click).
+
+### Session 2c: Word version of the prospectus (2026-11-27)
+- João asked for the prospectus in Word as well. Claude Code converted the same HTML source with pandoc 3.14 (`tools/docx/pagebreak.lua`: page break after the cover, no duplicate title), then formatted it with Microsoft Word through COM (`tools/docx/format_docx.ps1`: A4, 2 cm margins, Calibri 11 pt, blue headings, ruled tables with right-aligned numbers, full-width figures, page numbers from page 2).
+- Output: `prospectus/FM2270_Prospectus.docx`: cover + 7 content pages at 11 pt (the PDF stays the submission file: cover + 6 pages). Same text, tables, figures and links as the PDF (it is generated from the same HTML, which reads every number from the notebook outputs). Checked by exporting it to PDF with Word and inspecting every page.
+
