@@ -1,0 +1,44 @@
+{
+  "first_month": "2006-01-31",
+  "last_month": "2026-10-30",
+  "n_months": 250,
+  "breakeven_bps": 199.13053046911955,
+  "avg_weights": {
+    "SPY": 0.22447796408252504,
+    "IEF": 0.5602233183132025,
+    "GLD": 0.21529871760427238
+  },
+  "latest_weights": {
+    "SPY": 0.24821143470347184,
+    "IEF": 0.640470405719732,
+    "GLD": 0.11131815957679614
+  },
+  "latest_weight_date": "2026-10-30",
+  "rolling_vol_min": {
+    "Inverse-vol (strategy)": 0.04383586880888779,
+    "60/40 (primary benchmark)": 0.05067457048836433,
+    "Equal weight 1/3": 0.0533443602011258,
+    "SPY buy & hold": 0.08377002511646942
+  },
+  "rolling_vol_max": {
+    "Inverse-vol (strategy)": 0.09898725371951188,
+    "60/40 (primary benchmark)": 0.13854145935377943,
+    "Equal weight 1/3": 0.11988860081656826,
+    "SPY buy & hold": 0.22563916252150193
+  },
+  "rf_mean_annual": 0.01690107784255022,
+  "corr_spy_ief_2022": 0.19001105348122016,
+  "corr_spy_ief_full": -0.28743316176157097,
+  "worst_month": {
+    "Inverse-vol (strategy)": -0.07211094019839226,
+    "60/40 (primary benchmark)": -0.10260572814197366,
+    "Equal weight 1/3": -0.11178301934364976,
+    "SPY buy & hold": -0.16518679630592237
+  },
+  "worst_month_date": {
+    "Inverse-vol (strategy)": "2008-10-31",
+    "60/40 (primary benchmark)": "2008-10-31",
+    "Equal weight 1/3": "2008-10-31",
+    "SPY buy & hold": "2008-10-31"
+  }
+}

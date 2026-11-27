@@ -5,7 +5,8 @@
 > The strategy family is already a group decision: an inverse-volatility ("risk-balanced") portfolio. Everything else below is a proposal.
 
 **Approval status:** ☐ Assets ☐ Sample ☐ Volatility estimate ☐ Benchmarks ☐ Risk-free ☐ Metrics ☐ Costs ☐ Robustness ☐ Client ☐ Implementation ☐ App
-**Approved by / date:** _[ ]_
+**Approved by / date:** _[ ]_  (João to tick the boxes after reviewing.)
+**Implementation note (2026-11-27):** João asked Claude Code to complete all deliverables as the only group member, so the backtest was implemented with this proposal **as written**, using: data from 2004-12-01 (evaluation Jan 2006 – Oct 2026), end date 2026-10-31, metrics on monthly log returns (portfolios built from simple returns), base cost 10 bps per unit traded. See `journal/JOURNAL.md`, Session 2.
 
 ---
 
