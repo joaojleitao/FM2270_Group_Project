@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MODULE = ROOT / "app" / "strategy.py"
 OUT = ROOT / "notebook" / "FM2270_backtest.ipynb"
 
-GROUP_NAME = "[MOODLE GROUP NAME]"
+GROUP_NAME = "Project Group C"
 MEMBERS = "[Full name, student number]"
 REPO_URL = "https://github.com/joaojleitao/FM2270_Group_Project"
 APP_URL = "[STREAMLIT APP URL]"

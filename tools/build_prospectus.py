@@ -17,7 +17,7 @@ OUTS = ROOT / "notebook" / "outputs"
 DEST = ROOT / "prospectus"
 CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 
-GROUP_NAME = "[MOODLE GROUP NAME]"
+GROUP_NAME = "Project Group C"
 MEMBERS = "[Full name, student number]"
 REPO_URL = "https://github.com/joaojleitao/FM2270_Group_Project"
 APP_URL = "[STREAMLIT APP URL]"

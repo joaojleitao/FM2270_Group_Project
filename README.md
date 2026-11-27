@@ -1,7 +1,7 @@
 # FM 2270 Financial Modeling: Group Project
 **Inverse-volatility ("risk-balanced") portfolio: investor prospectus, backtest notebook and app**
 
-- **Moodle group:** _[MOODLE GROUP NAME]_
+- **Moodle group:** Project Group C
 - **Members:** _[Full name, student number]_
 - **Course:** 2270 Financial Modeling, MSc Finance, Nova SBE (Fall 2026)
 
